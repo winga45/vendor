@@ -15,3 +15,7 @@
 ifeq (uber_hammerhead,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/uber_hammerhead.mk
 endif
+
+ifeq (uber_shamu,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/uber_shamu.mk
+endif
