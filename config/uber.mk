@@ -90,8 +90,8 @@ ifeq (true,$(ENABLE_GCCONLY))
 OPT4 := (gcconly)
 endif
 
-ifeq (true,$(FLOOP_NEST_OPTIMIZE))
-OPT5 := (floop_nest_optimize)
+ifeq (true,$(CLANG_O3))
+OPT5 := (clang_O3)
 endif
 
 GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)
