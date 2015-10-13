@@ -94,15 +94,7 @@ ifeq (true,$(FLOOP_NEST_OPTIMIZE))
 OPT5 := (floop_nest_optimize)
 endif
 
-ifeq (true,$(TARGET_USE_PIPE))
-OPT6 := (pipe)
-endif
-
-ifeq (true,$(FFAST_MATH))
-OPT7 := (fast_math)
-endif
-
-GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)$(OPT6)$(OPT7)
+GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)
 ifneq (,$(GCC_OPTIMIZATION_LEVELS))
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.uber.flags=$(GCC_OPTIMIZATION_LEVELS)
