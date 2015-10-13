@@ -102,15 +102,11 @@ ifeq (true,$(TARGET_USE_PIPE))
 OPT7 := (pipe)
 endif
 
-ifeq (true,$(USE_HOST_4_8))
-OPT8 := (host_4_8)
-endif
-
 ifeq (true,$(FFAST_MATH))
-OPT9 := (fast_math)
+OPT8 := (fast_math)
 endif
 
-GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)$(OPT6)$(OPT7)$(OPT8)$(OPT9)
+GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)$(OPT6)$(OPT7)$(OPT8)
 ifneq (,$(GCC_OPTIMIZATION_LEVELS))
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.uber.flags=$(GCC_OPTIMIZATION_LEVELS)
