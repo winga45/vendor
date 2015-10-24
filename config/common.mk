@@ -58,6 +58,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/uber/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
+# Camera Effects
+PRODUCT_COPY_FILES +=  \
+    vendor/uber/prebuilt/vendor/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/uber/prebuilt/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+
 # Backuptool support
 PRODUCT_COPY_FILES += \
     vendor/uber/prebuilt/addon.d/50-uber.sh:system/addon.d/50-uber.sh \
