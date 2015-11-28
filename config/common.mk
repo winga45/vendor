@@ -63,6 +63,15 @@ PRODUCT_COPY_FILES +=  \
     vendor/uber/prebuilt/vendor/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     vendor/uber/prebuilt/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 
+#Root by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
+
+#extras
+PRODUCT_COPY_FILES += \
+    vendor/uber/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/uber/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+
 # Backuptool support
 PRODUCT_COPY_FILES += \
     vendor/uber/prebuilt/addon.d/50-uber.sh:system/addon.d/50-uber.sh \
@@ -71,4 +80,10 @@ PRODUCT_COPY_FILES += \
 
 # Additional Packages
 PRODUCT_PACKAGES += \
-    Exchange2
+    Exchange2 \
+    LockClock \
+    OmniSwitch
+
+# Inherit common product build prop overrides
+-include vendor/uber/config/version.mk
+
